@@ -9,7 +9,7 @@ class MessagesController extends Controller
 {
     public function get()
     {
-        $messages = DB::select("select * from messages");
+        $messages = DB::select("select content from messages");
         return view("index",['messages' => $messages]);
     }
 }

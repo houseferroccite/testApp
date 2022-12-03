@@ -20,13 +20,11 @@
 </div>
 <div class="container">
 
-    @foreach ($messages as $message)
-        <div class="alert alert-warning" role="alert">
-{{--            {{ json_decode($message->content) }}--}}
-                    {{json_decode($message->content->text)}}
-        </div>
-    @endforeach
-
+        @foreach ($messages as $message)
+            <div class="alert alert-warning" role="alert">
+                @dump($message)
+            </div>
+        @endforeach
 </div>
 </body>
 <!-- JavaScript Bundle with Popper -->
